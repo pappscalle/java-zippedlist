@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.StreamSupport;
 
 public class Main {
 
@@ -23,7 +24,24 @@ public class Main {
         
         System.out.println(zipWithIntStream(firstNames, lastNames));
         
+        ZippedList zip = new ZippedList(firstNames, lastNames);
+        zip.forEach(System.out::println);
+        for (String s : zip) {
+           System.out.println(s);
+        }
+        System.out.println(zip);
         
+        System.out.println(zip.asList());
+        
+        
+        ZippedList2 zip2 = new ZippedList2(firstNames, lastNames);
+         zip2.forEach(System.out::println);
+        for (String s : zip2) {
+           System.out.println(s);
+        }
+        System.out.println(zip2);
+        
+       
     }
 
     private static List<String> zipWithForLoop(List<String> firstNames, List<String> lastNames) {
@@ -52,5 +70,4 @@ public class Main {
                 .collect(Collectors.toList());
     }
    
-    
 }
