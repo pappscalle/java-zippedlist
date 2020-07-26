@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -16,37 +15,64 @@ public class Main {
         List<String> lastNames = Arrays.asList("Andersson", "Bengtsson", "Carlsson");
         
         
-        System.out.print("1st List: ");
+        System.out.print("First names: ");
         System.out.println(firstNames);
-        System.out.print("2nd List: ");
+        System.out.println();
+        
+        System.out.print("Family names: ");
         System.out.println(lastNames);
-     
-        System.out.println("For loop: ");
+        System.out.println();
+        
+        System.out.print("Complete names with FOR LOOP: ");
         System.out.println(zipWithForLoop(firstNames, lastNames));
-        
-        System.out.println("Iterator: ");
+        System.out.println();
+               
+        System.out.print("... with ITERATOR: ");
         System.out.println(zipWithIterators(firstNames, lastNames));
-        
-        System.out.print("INT Stream: ");
+        System.out.println();
+                       
+        System.out.print("... with INTSTREAM: ");
         System.out.println(zipWithIntStream(firstNames, lastNames));
+        System.out.println();
         
-        System.out.println("Iterable class: ");
-        ZippedIterator zip = new ZippedIterator(firstNames, lastNames);
-        zip.forEach(System.out::println);
+        System.out.println("... with ITERABLE class ");
+        ZippedIterable zip = new ZippedIterable(firstNames, lastNames);
+       
+        System.out.print("1) .foreach: ");
+        zip.forEach(System.out::print);
+        System.out.println();
+
+        
+        System.out.print("2) Extended for-loop: ");
         for (String s : zip) {
-           System.out.println(s);
+           System.out.print(s);
+           System.out.print(", ");
         }
+        System.out.println();
+        
+        
+        System.out.print("3) in println() (not working): ");
         System.out.println(zip);
         
+        System.out.print("4) in println (after conversion to List): ");
         System.out.println(zip.asList());
         
+        System.out.println();
         System.out.println("List class: ");
-        
-        ZippedList zip2 = new ZippedList(firstNames, lastNames, (x, y) -> x + " " + y);
-        zip2.forEach(System.out::println);
+       
+        ZippedList<String, String, String> zip2 = new ZippedList<>(firstNames, lastNames, (t, u) ->  t + " " + u);
+
+        System.out.print("1) .foreach: ");
+        zip2.forEach(System.out::print);
+        System.out.println();
+
+        System.out.print("2) Extended for-loop: ");
         for (String s : zip2) {
-           System.out.println(s);
+           System.out.print(s);
         }
+        System.out.println();
+        
+        System.out.print("3) in println(): ");
         System.out.println(zip2);
         
     }
