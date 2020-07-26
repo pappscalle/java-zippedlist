@@ -1,5 +1,5 @@
 # java-zippedlist
-Java does unfortunately not have a zip function in the Streams API... Let's try some alternative ways to zip two lists
+Java does unfortunately not have a "zip" function in the Streams API... Let's try some alternative ways to zip two lists...
 
 ### Background
 
