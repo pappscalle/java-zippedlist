@@ -32,7 +32,7 @@ Pros:
   * the counter has a short scope (just inside the for-loop)                                                                                  
                                                                                   
 Cons:
-  * imperative, not Object oriented at all
+  * imperative, not object oriented at all
   * requires a mutable collection (people)
                                           
 #### Iterators
