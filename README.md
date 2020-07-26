@@ -13,6 +13,7 @@ and we want to "zip" these two list to get the following result:
 ```
 [Arnold Schwarzenegger, Sylvester Stallone, Jean-Claude Van Damme]
 ```
+If one of the lists are shorter than the other, the result should have the same length as the shorter list.
 
 #### a simple for-loop
 
@@ -30,8 +31,6 @@ Pros:
 Cons:
   * imperative, not Object oriented at all
   * requires a mutable collection (people)
-  * would reallt need an extra check to make sure the  
-                                          
                                           
 #### iterator
 
@@ -44,10 +43,9 @@ while (f.hasNext() && l.hasNext() ) {
 }
 ```
 Pros:
-* slightly more elgant than 
-*
+* No need to check if the two lists are the same size
 Cons:
-*
-*
+* The iterators have too large scope (outside if the while-loop)
+* The mutable collection is still needed
 
 ####
