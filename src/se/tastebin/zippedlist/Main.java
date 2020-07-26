@@ -1,4 +1,4 @@
-package zipped;
+package se.tastebin.zippedlist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,7 +42,7 @@ public class Main {
         
         System.out.println("List class: ");
         
-        ZippedList zip2 = new ZippedList(firstNames, lastNames, (x, y) -> x + "sasa " + y);
+        ZippedList zip2 = new ZippedList(firstNames, lastNames, (x, y) -> x + " " + y);
         zip2.forEach(System.out::println);
         for (String s : zip2) {
            System.out.println(s);

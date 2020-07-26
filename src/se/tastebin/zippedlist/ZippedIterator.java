@@ -1,4 +1,4 @@
-package zipped;
+package se.tastebin.zippedlist;
 
 import java.util.Iterator;
 import java.util.List;
