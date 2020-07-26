@@ -1,8 +1,18 @@
 # java-zippedlist
 Java does unfortunately not have a zip function in the Streams API... Let's try some alternative ways to zip two lists
 
-Assume
+### Background
 
+Assume we have two list; one with first names and one with family names
+```
+List<String> firstNames = Arrays.asList("Arnold", "Sylvester", "Jean-Claude");
+List<String> lastNames = Arrays.asList("Schwarzenegger", "Stallone", "Van Damme");
+```        
+and we want to "zip" these two list to get the following result:
+
+```
+[Arnold Schwarzenegger, Sylvester Stallone, Jean-Claude Van Damme]
+```
 
 #### a simple for-loop
 
