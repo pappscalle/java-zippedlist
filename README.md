@@ -44,6 +44,7 @@ while (f.hasNext() && l.hasNext() ) {
 ```
 Pros:
 * No need to check if the two lists are the same size
+
 Cons:
 * The iterators have too large scope (outside if the while-loop)
 * The mutable collection is still needed
