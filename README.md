@@ -67,7 +67,7 @@ Pros:
 Cons:
 * It's still a for loop, though it looks more or less like a hack
 
-#### Custom class that imnplements the Iterable interface, and encapsulate the input lists.
+#### Custom class that implements the Iterable interface, and encapsulate the input lists.
 
 ```
 ZippedIterable zip = new ZippedIterable(firstNames, lastNames);
