@@ -15,7 +15,7 @@ and we want to "zip" these two list to get the following result:
 ```
 If one of the lists are shorter than the other, the result should have the same length as the shorter list.
 
-#### a simple for-loop
+#### A simple for-loop
 
 ```
 List<String> people = new ArrayList<>();
@@ -32,7 +32,7 @@ Cons:
   * imperative, not Object oriented at all
   * requires a mutable collection (people)
                                           
-#### iterator
+#### Iterators
 
 ```
 List<String> people = new ArrayList<>();
@@ -46,7 +46,20 @@ Pros:
 * No need to check if the two lists are the same size
 
 Cons:
-* The iterators have too large scope (outside if the while-loop)
+* The iterators have too large scope (outside of the while-loop)
 * The mutable collection is still needed
 
-####
+#### Java stream
+
+```
+return IntStream.range(0, Math.min(firstNames.size(), lastNames.size()))
+                .mapToObj(i -> firstNames.get(i) + " " + lastNames.get(i))
+                .collect(Collectors.toList());
+```
+Pros:
+* No need for a mutable collection
+
+Cons:
+* The iterators have too large scope (outside of the while-loop)
+* The mutable collection is still needed
+
