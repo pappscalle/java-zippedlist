@@ -90,7 +90,7 @@ Cons:
 #### Create a real List and encapsulate the input Lists
 
 Create a real list, by extending the AbstractList-class. Encapsulate the input lists, and concatenate the result in the .get()-method.
-
+Note that the example is made generic, so any type of lists should be possible to zip.
 ```
 ZippedList<String, String, String> people = new ZippedList<>(firstNames, lastNames, (t, u) ->  t + " " + u);
 people.stream()...
