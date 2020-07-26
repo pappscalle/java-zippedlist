@@ -15,6 +15,9 @@ and we want to "zip" these two list to get the following result:
 ```
 If one of the lists are shorter than the other, the result should have the same length as the shorter list.
 
+There are a few libraries that contains helper methods for zipping lists, such as Google Guava https://github.com/google/guava
+or Protonpack https://github.com/poetix/protonpack, but what other options are there ?
+
 #### A simple for-loop
 
 ```
